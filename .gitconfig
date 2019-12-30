@@ -1,3 +1,7 @@
 [user]
 	name = Mika Haapakorpi
 	email = mika.haapakorpi@solita.fi
+[core]
+	editor = vi
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
