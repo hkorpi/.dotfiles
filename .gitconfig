@@ -1,6 +1,7 @@
 [user]
 	name = Mika Haapakorpi
 	email = mika.haapakorpi@solita.fi
+	signingkey = 9E4D972BE9381047F0C7B5EC2F946050BBFF0325
 [core]
 	editor = vi
 [alias]
