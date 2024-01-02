@@ -6,6 +6,14 @@
 alias ls='ls --color=auto'
 alias ll='ls -lahF --time-style=long-iso'
 
+# +-----------------------------------------+
+# | interactive commands - ask confirmation |
+# +-----------------------------------------+
+
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+
 # +------+
 # | grep |
 # +------+
