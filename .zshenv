@@ -14,6 +14,3 @@ export SAVEHIST=10000                   # Maximum events in history file
 # umask
 umask 0027
 
-# path
-export PATH=~/bin:$PATH
-
