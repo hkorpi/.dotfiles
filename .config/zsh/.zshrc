@@ -17,8 +17,11 @@ setopt CORRECT              # Spelling correction
 #setopt CDABLE_VARS         # Change directory to a path stored in a variable.
 #setopt EXTENDED_GLOB       # Use extended globbing syntax.
 
+# see https://github.com/romkatv/powerlevel10k/issues/72
 function nav-redraw-prompt() { BUFFER=; zle accept-line; }
 function nav-parent() { cd -q .. && nav-redraw-prompt }
+
+# see https://github.com/romkatv/zsh4humans/blob/v5/fn/-z4h-cd-rotate
 function nav-cd-rotate() {
   () {
     while (( $#dirstack )) && ! pushd -q $1 &>/dev/null; do
@@ -55,11 +58,6 @@ setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
-# Up arrow
-bindkey "${terminfo[kcuu1]}" history-search-backward
-# Down arrow
-bindkey "${terminfo[kcud1]}" history-search-forward
-
 # +--------+
 # | COLORS |
 # +--------+
@@ -84,3 +82,12 @@ source /usr/share/doc/fzf/examples/completion.zsh
 
 source "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZDOTDIR/terminal-title.zsh"
+
+source "$ZDOTDIR/zsh-history-substring-search/zsh-history-substring-search.zsh"
+
+# Up arrow
+bindkey "${terminfo[kcuu1]}" history-substring-search-up
+# Down arrow
+bindkey "${terminfo[kcud1]}" history-substring-search-down
+
+
