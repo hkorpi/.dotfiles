@@ -27,3 +27,11 @@ alias egrep='egrep --color=auto'
 # +-----------+
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# +----+
+# | ps |
+# +----+
+
+# similar long BSD options: ps auxf
+alias pl='ps -elyFH | less -S'
+
